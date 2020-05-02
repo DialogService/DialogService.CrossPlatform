@@ -26,10 +26,10 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="DialogService" Version="0.1.0" />
-    <PackageReference Include="DialogService.Win32" Version="0.1.0" />
-    <PackageReference Include="DialogService.MacOS" Version="0.1.0" />
-    <PackageReference Include="DialogService.Linux" Version="0.1.0" />
+    <PackageReference Include="DialogService" Version="0.1.1" />
+    <PackageReference Include="DialogService.Win32" Version="0.1.3" />
+    <PackageReference Include="DialogService.MacOS" Version="0.1.3" />
+    <PackageReference Include="DialogService.Linux" Version="0.1.3" />
   </ItemGroup>
 
 </Project>
