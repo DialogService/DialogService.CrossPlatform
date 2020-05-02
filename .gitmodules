@@ -7,3 +7,6 @@
 [submodule "DialogService.Linux"]
 	path = DialogService.Linux
 	url = https://github.com/DialogService/DialogService.Linux
+[submodule "DialogService.MacOS"]
+	path = DialogService.MacOS
+	url = https://github.com/DialogService/DialogService.MacOS
