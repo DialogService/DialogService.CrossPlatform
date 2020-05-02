@@ -2,16 +2,34 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-	<IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
-	<IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
-	<IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.1.1</Version>
+    <Authors>Yaroslav Kibysh</Authors>
+    <Description>Cross-platform implementation for DialogService</Description>
+    <PackageIcon>DialogService Logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/DialogService/DialogService.CrossPlatform</RepositoryUrl>
+    <PackageReleaseNotes>Early testing</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://dialogservice.github.io/</PackageProjectUrl>
+    
+    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+    <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
+    <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DialogService\DialogService\DialogService.csproj" />
-	<ProjectReference Condition="'$(IsWindows)'=='true'" Include="..\DialogService.Win32\DialogService.Win32\DialogService.Win32.csproj" />
-	<ProjectReference Condition="'$(IsOSX)'=='true'" Include="..\DialogService.MacOS\DialogService.MacOS\DialogService.MacOS.csproj" />
-	<ProjectReference Condition="'$(IsLinux)'=='true'" Include="..\DialogService.Linux\DialogService.Linux\DialogService.Linux.csproj" />
+    <None Include="..\DialogService.Media\DialogService Logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="DialogService" Version="0.1.0" />
+    <PackageReference Include="DialogService.Win32" Version="0.1.0" />
+    <PackageReference Include="DialogService.MacOS" Version="0.1.0" />
+    <PackageReference Include="DialogService.Linux" Version="0.1.0" />
   </ItemGroup>
 
 </Project>

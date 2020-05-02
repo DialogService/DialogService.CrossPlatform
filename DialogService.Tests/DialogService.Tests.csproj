@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DialogService.CrossPlatform\DialogService.CrossPlatform.csproj" />
-    <ProjectReference Include="..\DialogService\DialogService\DialogService.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace DialogService.CrossPlatform
 {
@@ -9,7 +10,7 @@ namespace DialogService.CrossPlatform
         /// </summary>
         public static IDialogService Get()
         {
-            return new PlatformImplementation().Get();
+            throw new NotImplementedException();
         }
     }
 }
