@@ -1,3 +1,6 @@
 [submodule "DialogService"]
 	path = DialogService
 	url = https://github.com/DialogService/DialogService
+[submodule "DialogService.Win32"]
+	path = DialogService.Win32
+	url = https://github.com/DialogService/DialogService.Win32
